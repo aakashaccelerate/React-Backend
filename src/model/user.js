@@ -56,7 +56,8 @@ user.registerUser = (userData) => {
                 })
             } else {
                 console.log("No register")
-                throw new Error('User with this E-mail is already Registered. Please login.')
+                //throw new Error('User with this E-mail is already Registered. Please login.')
+                return null;
             }
         })
     })

@@ -19,9 +19,10 @@ user.registerUser = (userData) => {
         if (response)
             return response;
         else {
-            let err = new Error('Registration Failed');
-            err.status = 500;
-            throw err;
+            // let err = new Error('Registration Failed');
+            // err.status = 500;
+            // throw err;
+            return null;
         }
     })
 }

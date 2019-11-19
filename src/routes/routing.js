@@ -5,11 +5,14 @@ const router = express.Router();
 
 //REGISTER API
 router.post('/register', (req, res, next) => {
-    console.log('In routing')
     return service.registerUser(req.body).then(responseData => {
+        if(responseData)
         res.json({ data: responseData });
-    }).catch(err => {
-        next(err);
+        else{
+            console.log("error")
+            res.send(null);
+        }
+     
     })
 })
 

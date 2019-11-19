@@ -4,7 +4,6 @@ mongoose.Promise = global.Promise;
 mongoose.set('userCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 const url = "mongodb://localhost:27017/UsersDB"
-
 const usersSchema = Schema({
     userId: { type: String, required: [true, 'userId is required'] },
     uCredentials: {
@@ -31,6 +30,7 @@ const usersSchema = Schema({
         uLastLogin: { type: Date, default: new Date().toISOString() }
     },
 }, { collection: "Users", timestamps: true })
+
 
 let connection = {}
 
